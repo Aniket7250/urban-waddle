@@ -5,9 +5,7 @@ pipeline {
         skipDefaultCheckout(true)
     }
      parameters
-     {
-         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
-		 
+     {         
 		 string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -29,7 +27,7 @@ pipeline {
     	    {
                  sh script: """
 							  foo=${PERSON} 
-							  echo ${$foo} 
+							  echo $foo
 							""" 
     	    }
         }
