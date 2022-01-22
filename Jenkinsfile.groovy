@@ -6,7 +6,7 @@ pipeline {
     }
      parameters
      {         
-		 string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+		 string(name: 'token', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
@@ -26,8 +26,8 @@ pipeline {
     	    steps
     	    {
                  sh script: """
-							  foo=${PERSON} 
-							  echo $foo
+		 	Write-Host "Please verify the scripts to"$token "be executed...."
+							  
 							""" 
     	    }
         }
