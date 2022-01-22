@@ -1,6 +1,6 @@
-agentName= "CTS01WININTRA01"
+//agentName= "CTS01WININTRA01"
 pipeline {
-    agent {label agentName}
+    agent any
     options {
         skipDefaultCheckout(true)
     }
