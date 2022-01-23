@@ -25,8 +25,10 @@ pipeline {
     	{
     	    steps
     	    {
-                 sh script: """
-		 	Write-Host "Please verify the scripts to"$token "be executed...."
+                 sh """
+		 	
+                    echo my_var=${name}
+             
 							  
 							""" 
     	    }
