@@ -27,7 +27,7 @@ pipeline {
     	    {
                  sh """
 		 	
-                    echo my_var=${name}
+                    echo my_var=${token}
              
 							  
 							""" 
